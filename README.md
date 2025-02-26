@@ -7,15 +7,18 @@ This repository contains the code and report for the project **Optimization for 
 - Implementation of anchor box clustering using a custom IoU metric
 - Validation on a new dataset (African wildlife) [2]
 
-## Structure
+## Project Structure
 ```bash
+├── best_model/                    # Directory for saved trained models
+├── data/                          # Dataset directory  
+├── models/                        # YOLOV2 model
+│   ├── darknet19classifier.py     # Darknet 19 Classifier model
+│   ├── darknet19detector.py       # Darknet 19 Detector model
 ├── notebooks/                     # Jupyter notebooks for key steps  
 │   ├── 0-Data_Preparation.ipynb   # Splitting datasets, resizing images/boxes  
 │   ├── 1-KMeans_Clustering.ipynb  # Anchor box clustering with custom IoU metric  
 │   ├── 2-Training.ipynb           # YOLOv2 model training  
 │   └── 3-Testing.ipynb            # Model evaluation on test data  
-├── data/                          # Dataset directory  
-├── best_model/                    # Directory for saved trained models  
 ├── utils/                         # Utility scripts  
 │   ├── clustering.py              # Functions for anchor box clustering  
 │   ├── dataset.py                 # Dataset handling functions  
